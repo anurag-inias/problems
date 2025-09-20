@@ -1,5 +1,5 @@
 site_name: listless 💤
-site_url: "https://listless.dev/problems"
+site_url: "https://listless.dev"
 theme:
   name: material
   logo: assets/fatigue-light.svg
@@ -74,3 +74,8 @@ extra_javascript:
 
 extra_css:
   - assets/extra.css
+
+nav:
+  - About: "problems/index.md"
+  - Array:
+    - Remove duplicates: "problems/array/001-remove-duplicates.md"
