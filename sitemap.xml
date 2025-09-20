@@ -8,4 +8,12 @@
          <loc>https://listless.dev/array/001-remove-duplicates/</loc>
          <lastmod>2025-09-20</lastmod>
     </url>
+    <url>
+         <loc>https://listless.dev/array/002-generate-all-subsequences/</loc>
+         <lastmod>2025-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://listless.dev/array/003-generate-all-subarrays/</loc>
+         <lastmod>2025-09-20</lastmod>
+    </url>
 </urlset>
