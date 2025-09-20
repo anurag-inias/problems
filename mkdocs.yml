@@ -27,6 +27,7 @@ theme:
         icon: material/toggle-switch-off-outline
         name: Switch to light mode
 plugins:
+  - tags
   - glightbox
   - placeholder:
       placeholder_file: placeholder-plugin.yaml
