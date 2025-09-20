@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Virgil";
+  src: url("https://excalidraw.com/Virgil.woff2");
+}
+@font-face {
+  font-family: "Excalifont";
+  src: url("/assets/fonts/Excalifont-Regular.woff2");
+}
+@font-face {
+  font-family: "Assistant";
+  src: url("https://excalidraw.com/Assistant-Regular.woff2");
+}
+@font-face {
+  font-family: "Comic Shanns";
+  src: url("/assets/fonts/comic-shanns-2.ttf");
+}
+@font-face {
+  font-family: "Cascadia";
+  src: url("/assets/fonts/CascadiaCode.woff2");
+}
+@font-face {
+  font-family: "Cascadia";
+  src: url("/assets/fonts/CascadiaCodeItalic.woff2");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mullet";
+  src: url("/assets/fonts/mullet/normal.ttf");
+}
+@font-face {
+  font-family: "Mullet";
+  src: url("/assets/fonts/mullet/italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Briskpace";
+  src: url("/assets/fonts/Briskpace.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Briskpace";
+  src: url("/assets/fonts/BriskpaceItalic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Briskpace";
+  src: url("/assets/fonts/BriskpaceBold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Briskpace";
+  src: url("/assets/fonts/BriskpaceBoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+.md-logo img {
+  content: url('/assets/fatigue-light.svg');
+}
+
+:root {
+  font-size: 20px;
+}
+
+:root [data-md-color-scheme=slate] .md-logo img  {
+  content: url('/assets/fatigue-dark.svg');
+}
+
+.md-typeset { 
+  font-size: 0.7rem;
+}
+
+.md-typeset code, .md-typeset pre {
+  font-size: 0.6rem;
+  font-variant-ligatures: common-ligatures;
+}
+
+.highlight .c, .highlight .c1, .highlight .ch, .highlight .cm, .highlight .cs, .highlight .sd {
+  font-style: italic;
+}
+
+.md-typeset .emojione, .md-typeset .gemoji, .md-typeset .twemoji {
+  vertical-align: sub;
+}
+
+.problem-index {
+  display: inline-flex;
+}
+
+.problem-index span {
+  padding-right: 4px;
+  min-width: 25px;
+  text-align: right;
+}
