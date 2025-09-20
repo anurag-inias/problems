@@ -80,3 +80,5 @@ nav:
   - About: "index.md"
   - Array:
     - Remove duplicates: "array/001-remove-duplicates.md"
+    - Generate all subsequences: "array/002-generate-all-subsequences.md"
+    - Generate all subarrays: "array/003-generate-all-subarrays.md"
