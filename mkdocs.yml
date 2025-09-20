@@ -76,6 +76,6 @@ extra_css:
   - assets/extra.css
 
 nav:
-  - About: "problems/index.md"
+  - About: "index.md"
   - Array:
-    - Remove duplicates: "problems/array/001-remove-duplicates.md"
+    - Remove duplicates: "array/001-remove-duplicates.md"
