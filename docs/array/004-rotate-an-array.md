@@ -13,7 +13,7 @@ output = [4, 5, 6, 1, 2, 3]
 
 ## Solution
 
-??? "Approach"
+??? "Approach 1"
 
     Juggling Algorithm. The core idea is to divide the array into gcd(n, k) sets. Each set's elements are rotated among themselves.
 
@@ -45,10 +45,10 @@ output = [4, 5, 6, 1, 2, 3]
 
     ??? "Expand"
 
-        $O(n)$ run time.
+        $O(n)$ run time. 3ms beats 39.21%.
 
         ```kotlin
-        fun rotate(nums: IntArray, k: Int): IntArray {
+        fun rotateRight(nums: IntArray, k: Int): IntArray {
           val n = nums.size
           val k = (n + k % n) % n
 
@@ -77,6 +77,46 @@ output = [4, 5, 6, 1, 2, 3]
           return x
         }
         ```
+
+??? "Approach 2"
+    Mirroring. 
+
+    ??? "Pseudocode"
+
+        ![](004a.png)
+
+    ??? "Expand"
+
+        $O(n)$ run time. 0ms beats 100.00%.
+
+
+        ```kotlin
+        fun rotateRight(nums: IntArray, k: Int): IntArray {
+          val n = nums.size
+          val k = (n + k % n) % n
+          nums.reverse(0, n)
+          nums.reverse(0, k)
+          nums.reverse(k, n)
+          return nums
+        }
+
+        private fun IntArray.reverse(start: Int, end: Int) {
+          var l = start
+          var r = end - 1
+          while (l < r) {
+            val t = this[l]
+            this[l++] = this[r]
+            this[r--] = t
+          }
+        }
+        ```
+
+??? "Comparison"
+
+    By all accounts, juggling algorithm should be faster than the double reversal algorithm. After all, juggling algorithm is doing a single pass on the input whereas double reversal algorithm is doing 3x passes. However, double reversal has several points in its favour:
+
+    1. double reversal has better cache locality since it is processing contiguous memory blocks. In juggling algorithm, we end up performing non-sequential processing by jumping by `k` positions.
+    2. double reversal has simple index calculation, optimized for processors where as juggling requires complex modulo operations.
 
 ## Unit tests
 
