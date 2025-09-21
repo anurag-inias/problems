@@ -3,7 +3,7 @@
 !!! info "try"
     - index: 26
     - difficulty: easy
-    - [link](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
+    - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
 
 ## Description
 

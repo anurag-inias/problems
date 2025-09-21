@@ -3,7 +3,7 @@
 !!! info "try"
     - index: 78
     - difficulty: medium
-    - [link](https://leetcode.com/problems/subsets/description/)
+    - [Subsets](https://leetcode.com/problems/subsets/description/)
 
 ## Description
 

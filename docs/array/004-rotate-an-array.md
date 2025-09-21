@@ -1,5 +1,10 @@
 # Rotate an array
 
+!!! info "try"
+    - index: 189
+    - difficulty: easy
+    - [Rotate Array](https://leetcode.com/problems/rotate-array/description/)
+
 ## Description
 
 Given an array of numbers, rotate it by `k` steps.

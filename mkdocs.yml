@@ -84,3 +84,4 @@ nav:
     - Generate all subarrays: "array/003-generate-all-subarrays.md"
     - Rotate an array: "array/004-rotate-an-array.md"
     - Minimum operations to make elements equal: "array/005-minimum-operations-to-make-elements-equal.md"
+    - Contains duplicate within k distance: "array/006-contains-duplicate-within-k-distance.md"
