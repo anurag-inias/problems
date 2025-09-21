@@ -83,7 +83,7 @@ output = [4, 5, 6, 1, 2, 3]
 
     ??? "Pseudocode"
 
-        ![](004a.png)
+        ![](004.png)
 
     ??? "Expand"
 
