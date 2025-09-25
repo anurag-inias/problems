@@ -381,6 +381,25 @@ wheels = [
 ]
 
 [[package]]
+name = "problems"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "mkdocs-glightbox" },
+    { name = "mkdocs-material" },
+    { name = "mkdocs-placeholder-plugin" },
+    { name = "mkdocs-rss-plugin" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "mkdocs-glightbox", specifier = ">=0.5.1" },
+    { name = "mkdocs-material", specifier = ">=9.6.20" },
+    { name = "mkdocs-placeholder-plugin", specifier = ">=0.5.1" },
+    { name = "mkdocs-rss-plugin", specifier = ">=1.17.3" },
+]
+
+[[package]]
 name = "pygments"
 version = "2.19.2"
 source = { registry = "https://pypi.org/simple" }
@@ -474,25 +493,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/57/cb/7dc739a484b1a17ccf92a23dfe558ae615c232bd81e78a72049c25d1ff66/selectolax-0.3.29-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:484274f73839f9a143f4c13ce1b0a0123b5d64be22f967a1dc202a9a78687d67", size = 5727944, upload-time = "2025-04-30T15:16:49.52Z" },
     { url = "https://files.pythonhosted.org/packages/b7/09/95da4d2919d99a6090327390b84bc5440133196351e5e04c24cccda06cbb/selectolax-0.3.29-cp313-cp313-win32.whl", hash = "sha256:29e71fbd58b90d2920ef91a940680cb5331710fe397925ce9d10c3f2f086bf27", size = 1697529, upload-time = "2025-04-30T15:16:51.123Z" },
     { url = "https://files.pythonhosted.org/packages/0e/17/5a3951da22a4ad8f959088ddc370c68b28dad03190d91fcd137a52410fb9/selectolax-0.3.29-cp313-cp313-win_amd64.whl", hash = "sha256:e13befacff5f78102aa11465055ecb6d4b35f89663e36f271f2b506bcab14112", size = 1803334, upload-time = "2025-04-30T15:16:53.775Z" },
-]
-
-[[package]]
-name = "site"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "mkdocs-glightbox" },
-    { name = "mkdocs-material" },
-    { name = "mkdocs-placeholder-plugin" },
-    { name = "mkdocs-rss-plugin" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "mkdocs-glightbox", specifier = ">=0.5.1" },
-    { name = "mkdocs-material", specifier = ">=9.6.20" },
-    { name = "mkdocs-placeholder-plugin", specifier = ">=0.5.1" },
-    { name = "mkdocs-rss-plugin", specifier = ">=1.17.3" },
 ]
 
 [[package]]
