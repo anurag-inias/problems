@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://listless.dev/</loc>
-         <lastmod>2025-09-25</lastmod>
+         <lastmod>2025-09-26</lastmod>
     </url>
     <url>
          <loc>https://listless.dev/array/001-remove-duplicates/</loc>
-         <lastmod>2025-09-25</lastmod>
+         <lastmod>2025-09-26</lastmod>
     </url>
     <url>
          <loc>https://listless.dev/array/002-generate-all-subsequences/</loc>
-         <lastmod>2025-09-25</lastmod>
+         <lastmod>2025-09-26</lastmod>
     </url>
     <url>
          <loc>https://listless.dev/array/003-generate-all-subarrays/</loc>
-         <lastmod>2025-09-25</lastmod>
+         <lastmod>2025-09-26</lastmod>
     </url>
     <url>
          <loc>https://listless.dev/array/004-rotate-an-array/</loc>
-         <lastmod>2025-09-25</lastmod>
+         <lastmod>2025-09-26</lastmod>
     </url>
     <url>
          <loc>https://listless.dev/array/005-minimum-operations-to-make-elements-equal/</loc>
-         <lastmod>2025-09-25</lastmod>
+         <lastmod>2025-09-26</lastmod>
     </url>
     <url>
          <loc>https://listless.dev/array/006-contains-duplicate-within-k-distance/</loc>
-         <lastmod>2025-09-25</lastmod>
+         <lastmod>2025-09-26</lastmod>
+    </url>
+    <url>
+         <loc>https://listless.dev/array/007-rearrange-to-make-even-positions-greater-than-odds/</loc>
+         <lastmod>2025-09-26</lastmod>
     </url>
 </urlset>

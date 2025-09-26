@@ -87,3 +87,4 @@ nav:
       - Minimum operations to make elements equal: "array/005-minimum-operations-to-make-elements-equal.md"
     - Easy:
       - Contains duplicate within k distance: "array/006-contains-duplicate-within-k-distance.md"
+      - Rearrange to make even positions greater than odds: "array/007-rearrange-to-make-even-positions-greater-than-odds.md"
