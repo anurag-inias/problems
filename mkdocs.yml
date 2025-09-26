@@ -88,3 +88,4 @@ nav:
     - Easy:
       - Contains duplicate within k distance: "array/006-contains-duplicate-within-k-distance.md"
       - Rearrange to make even positions greater than odds: "array/007-rearrange-to-make-even-positions-greater-than-odds.md"
+      - Sum of all subarrays: "array/008-sum-of-all-subarrays.md"
