@@ -93,3 +93,4 @@ nav:
       - Buy and sell stocks II: "array/010-buy-and-sell-stock-2.md"
       - Single among doubles: "array/011-unique-number.md"
       - Missing number in list of first N natural numbers: "array/012-missing-in-natural-numbers.md"
+      - Missing and repeating number in list of first N natural numbers: "array/013-missing-and-repeating-in-natural-numbers.md"
