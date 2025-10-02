@@ -16,7 +16,7 @@ output = 1
 
 ## Solution
 
-??? "Approach"
+??? "First Approach"
 
     The expected list is $E = [1, 2, \dots, n-1]$ of size $n-1$. But one of the element is repeating, so the actual list is $A$ with the sum:
 
@@ -34,6 +34,39 @@ output = 1
         fun repeatingNumber(nums: IntArray): Int {
           val n = nums.size
           return nums.sum() - (n-1) * n / 2
+        }
+        ```
+
+??? "Second Approach"
+
+    So we have expected list $E$ and the actual list $A$ like this:
+
+    $$
+    \begin{align}
+    E &= 1 + 2 + \dots + n-1 \\
+    A &= E + r \text{ where } r \in [1, n-1]
+    \end{align}
+    $$
+
+    so if we are to xor through both $E$ and $A$, then that flips the duplicates and non-duplicates. That is, non-duplicate elements become duplicate, cancelling out their xor. While the $r$, the repeated element now ends up with 3 instances, and survives the xor.
+
+    $$
+    \begin{align}
+    1 \oplus 1 \oplus 2 \oplus 2 \oplus \dots \oplus n-1 \oplus n-1 \oplus r
+    \end{align}
+    $$
+
+
+    ??? "Implementation"
+
+        ```kotlin
+        fun repeatingNumber(nums: IntArray): Int {
+          val n = nums.size
+          var r = 0
+          for (i in nums.toList() + (1 until n)) {
+            r = r xor i
+          }
+          return r
         }
         ```
 
