@@ -860,18 +860,85 @@ S^{2}_e - S^{2}_a &amp;= (m + r)(m - r) \\
 </span></code></pre></div>
 </details>
 </details>
-<h2 id="unit-tests">Unit tests</h2>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nd">@Test</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">first</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">missingRepeatingNumbers</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)))</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">.</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// 2 is missing, 3 is repeating</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+<details>
+<summary>Second Approach</summary>
+<p>This problem is a special case of a more general problem:</p>
+<blockquote>
+<p>Find the two elements with odd occurrences in an array where all other elements appear even number of times.</p>
+</blockquote>
+<p>That is, let's say the expected array was <span class="arithmatex">\(E\)</span> and the actual array we got was <span class="arithmatex">\(A\)</span>: </p>
+<div class="arithmatex">\[
+\begin{align}
+E &amp;= a, b, c, m, r \\
+A &amp;= a, b, c, r, r
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(m\)</span> is the missing number and <span class="arithmatex">\(r\)</span> is the repeating number, with <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>, and <span class="arithmatex">\(c\)</span> being the remaining numbers.</p>
+<p>If we were to concatenate the two lists, we get <span class="arithmatex">\(L\)</span> (ignore the elements order):</p>
+<div class="arithmatex">\[
+L = a, a, b, b, c, c, m, r, r, r
+\]</div>
+<p>Notice the elements we are interested in are occuring odd number of times and the remaining elements appear even number of times. And, we have no longer the restriction over the range of these elements. That is, a more generalized problem.</p>
+<hr>
+<p>If we xor over <span class="arithmatex">\(L\)</span>, we get <span class="arithmatex">\(x\)</span> as:</p>
+<div class="arithmatex">\[
+\begin{align}
+x &amp;= a \oplus a \oplus b \oplus b \oplus c \oplus c \oplus m \oplus r \oplus r \oplus r \\
+&amp;= m \oplus r
+\end{align}
+\]</div>
+<p>Now in <span class="arithmatex">\(x\)</span>, bits shared between <span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(r\)</span> will be zero and only the bits where the two differ will be set. That is, if an arbitrary bit in <span class="arithmatex">\(x\)</span> is set, then:</p>
+<div class="arithmatex">\[
+\begin{align}
+b_i(m) = 0 &amp;\text{ and } b_i(r) = 1 \\
+b_i(m) = 1 &amp;\text{ and } b_i(r) = 0
+\end{align}
+\]</div>
+<p>Let's pick the rightmost set bit, which can be calculated as <span class="arithmatex">\(mask = x \ \ \&amp; \ -x\)</span>. If we iterate over <span class="arithmatex">\(L\)</span> with this mask, it will split the numbers in two groups.</p>
+<div class="arithmatex">\[
+\begin{align}
+A &amp;= a, a, r, r, r \\
+B &amp;= b, b, c, c, m
+\end{align}
+\]</div>
+<p><span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(r\)</span> can now be recovered from their individual groups as per previously discussed <a href="../011-unique-number/">Unique number</a> problem.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I'm showing <span class="arithmatex">\(a\)</span> falling in same group as <span class="arithmatex">\(r\)</span> as an example. The actual result will vary. The key point though is that in each of the two groups, the numbers we are not interest will appear even times and the number that we are interested in (<span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(r\)</span>) will not share the same group. </p>
+</div>
+<details>
+<summary>Implementation</summary>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">missingRepeatingNumbers</span><span class="p">(</span><span class="n">nums</span><span class="p">:</span><span class="w"> </span><span class="n">IntArray</span><span class="p">):</span><span class="w"> </span><span class="n">Pair</span><span class="o">&lt;</span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kt">Int</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="m">1.</span><span class="p">.</span><span class="na">nums</span><span class="p">.</span><span class="na">size</span><span class="p">).</span><span class="na">toList</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">toList</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 1..n + actual numbers</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">xor</span><span class="w"> </span><span class="n">n</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nd">@Test</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">second</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">missingRepeatingNumbers</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)))</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">.</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">5</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// 5 is missing, 1 is repeating</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="o">-</span><span class="n">x</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="m">1.</span><span class="p">.</span><span class="na">nums</span><span class="p">.</span><span class="na">size</span><span class="p">).</span><span class="na">toList</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">toList</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">n</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">mask</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">xor</span><span class="w"> </span><span class="n">n</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">xor</span><span class="w"> </span><span class="n">n</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">b</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="p">}</span>
+</span></code></pre></div>
+</details>
+</details>
+<h2 id="unit-tests">Unit tests</h2>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nd">@Test</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">first</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">missingRepeatingNumbers</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)))</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="p">.</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// 2 is missing, 3 is repeating</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nd">@Test</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">second</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">missingRepeatingNumbers</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)))</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">.</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">5</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// 5 is missing, 1 is repeating</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
 </span></code></pre></div>
 
 

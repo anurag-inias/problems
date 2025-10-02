@@ -56,6 +56,87 @@ output = (3, 4) with 3 repeating and 4 missing
         }
         ```
 
+??? "Second Approach"
+
+    This problem is a special case of a more general problem:
+
+    > Find the two elements with odd occurrences in an array where all other elements appear even number of times.
+
+    That is, let's say the expected array was $E$ and the actual array we got was $A$: 
+    
+    $$
+    \begin{align}
+    E &= a, b, c, m, r \\
+    A &= a, b, c, r, r
+    \end{align}
+    $$
+    
+    where $m$ is the missing number and $r$ is the repeating number, with $a$, $b$, and $c$ being the remaining numbers.
+
+    If we were to concatenate the two lists, we get $L$ (ignore the elements order):
+
+    $$
+    L = a, a, b, b, c, c, m, r, r, r
+    $$ 
+
+    Notice the elements we are interested in are occuring odd number of times and the remaining elements appear even number of times. And, we have no longer the restriction over the range of these elements. That is, a more generalized problem.
+
+    <hr>
+
+    If we xor over $L$, we get $x$ as:
+
+    $$
+    \begin{align}
+    x &= a \oplus a \oplus b \oplus b \oplus c \oplus c \oplus m \oplus r \oplus r \oplus r \\
+    &= m \oplus r
+    \end{align}
+    $$
+
+    Now in $x$, bits shared between $m$ and $r$ will be zero and only the bits where the two differ will be set. That is, if an arbitrary bit in $x$ is set, then:
+
+    $$
+    \begin{align}
+    b_i(m) = 0 &\text{ and } b_i(r) = 1 \\
+    b_i(m) = 1 &\text{ and } b_i(r) = 0
+    \end{align}
+    $$
+
+    Let's pick the rightmost set bit, which can be calculated as $mask = x \ \ \& \ -x$. If we iterate over $L$ with this mask, it will split the numbers in two groups.
+
+    $$
+    \begin{align}
+    A &= a, a, r, r, r \\
+    B &= b, b, c, c, m
+    \end{align}
+    $$
+
+    $m$ and $r$ can now be recovered from their individual groups as per previously discussed [Unique number](011-unique-number.md) problem.
+
+    !!! note
+          
+        I'm showing $a$ falling in same group as $r$ as an example. The actual result will vary. The key point though is that in each of the two groups, the numbers we are not interest will appear even times and the number that we are interested in ($m$ and $r$) will not share the same group. 
+
+    ??? "Implementation"
+
+        ```kotlin
+        fun missingRepeatingNumbers(nums: IntArray): Pair<Int, Int> {
+          var x = 0
+          for (n in (1..nums.size).toList() + nums.toList()) { // 1..n + actual numbers
+            x = x xor n
+          }
+
+          val mask = x and -x
+          var a = 0
+          var b = 0
+          for (n in (1..nums.size).toList() + nums.toList()) {
+            if ((n and mask) == 0) a = a xor n
+            else b = b xor n
+          }
+
+          return a to b
+        }
+        ```
+
 ## Unit tests
 
 ```kotlin
