@@ -5,13 +5,11 @@
       
       
       
-        <link rel="canonical" href="https://listless.dev/array/010-buy-and-sell-stock-2/">
+        <link rel="canonical" href="https://listless.dev/array/013-missing-and-repeating-in-natural-numbers/">
       
       
-        <link rel="prev" href="../009-buy-and-sell-stock-1/">
+        <link rel="prev" href="../012-missing-in-natural-numbers/">
       
-      
-        <link rel="next" href="../011-unique-number/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Buy and sell stocks II - listless 💤</title>
+        <title>Missing and repeating number in list of first N natural numbers - listless 💤</title>
       
     
     
@@ -88,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#buy-and-sell-stocks-ii" class="md-skip">
+        <a href="#missing-and-repeating-number-in-list-of-first-n-natural-numbers" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Buy and sell stocks II
+              Missing and repeating number in list of first N natural numbers
             
           </span>
         </div>
@@ -556,6 +554,75 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../010-buy-and-sell-stock-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buy and sell stocks II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../011-unique-number/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single among doubles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../012-missing-in-natural-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Missing number in list of first N natural numbers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -573,7 +640,7 @@
   
   
   <span class="md-ellipsis">
-    Buy and sell stocks II
+    Missing and repeating number in list of first N natural numbers
     
   </span>
   
@@ -586,7 +653,7 @@
   
   
   <span class="md-ellipsis">
-    Buy and sell stocks II
+    Missing and repeating number in list of first N natural numbers
     
   </span>
   
@@ -648,75 +715,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../011-unique-number/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Single among doubles
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../012-missing-in-natural-numbers/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Missing number in list of first N natural numbers
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../013-missing-and-repeating-in-natural-numbers/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Missing and repeating number in list of first N natural numbers
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -815,82 +813,65 @@
 
 
 
-<h1 id="buy-and-sell-stocks-ii">Buy and sell stocks II</h1>
-<div class="admonition info">
-<p class="admonition-title">try</p>
-<ul>
-<li>index: 122</li>
-<li>difficulty: medium</li>
-<li><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description">Best Time to Buy and Sell Stock II</a></li>
-</ul>
-</div>
+<h1 id="missing-and-repeating-number-in-list-of-first-n-natural-numbers">Missing and repeating number in list of first N natural numbers</h1>
 <h2 id="description">Description</h2>
-<p>Given an array <code>prices</code> where <code>prices[i]</code> is the price of a given stock on <span class="arithmatex">\(i^{th}\)</span> day, maximize your profit. You can buy and sell stock multiple times.</p>
+<p>We are given an array of size <span class="arithmatex">\(n\)</span> which is supposed to contain the distinct numbers from <span class="arithmatex">\([1, n]\)</span>. However, one number is missing and in its turn another number is repeated. Find them both.</p>
 <h2 id="example">Example</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>input  = [7, 1, 5, 3, 6, 4]
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>output = 7 (buy for $1 and sell for $5, buy for $3 and sell for $6)
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>input  = [1, 2, 3, 4, 5]
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>output = 0 (buy for $1 and sell for $5)
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>input  = [7, 6, 4, 3, 1]
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>output = 0 (can never make profit)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>input  = [1, 2, 3, 3, 4]
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>output = (3, 4) with 3 repeating and 4 missing
 </span></code></pre></div>
 <h2 id="solution">Solution</h2>
 <details>
-<summary>Approach</summary>
-<p>There are two key insights here:</p>
-<ol>
-<li>
-<p>when prices are increasing everyday, then buy-selling every day (buy on 1, sell on 2, buy on 2, sell on 3, buy on 3, sell on 4) is same as buying at the start of the interval (on 1) and selling at the end of the interval (on 4). <br> <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../010a.svg" data-desc-position="bottom"><img alt="" src="../010a.svg" width="300"></a></p>
-</li>
-<li>
-<p>buy low sell high. That seems obvious, but what it means for us is to buy on local minima (when price starts rising), and sell on local maxima (where price stops rising). <br> <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../010b.svg" data-desc-position="bottom"><img alt="" src="../010b.svg" width="300"></a></p>
-</li>
-</ol>
+<summary>First Approach</summary>
+<p>Let <span class="arithmatex">\(S_e\)</span> be expected sum of these numbers and <span class="arithmatex">\(S_a\)</span> be the actual sum of these numbers. Now let <span class="arithmatex">\(m\)</span> be the missing number and <span class="arithmatex">\(r\)</span> be the repeating number:</p>
+<div class="arithmatex">\[
+\begin{align}
+S_e - m + r &amp;= S_a \\
+S_e - S_a &amp;= m - r
+\end{align}
+\]</div>
+<p>Now let <span class="arithmatex">\(S^{2}_e\)</span> be expected sum of the numbers squared (i.e. <span class="arithmatex">\(S^{2}_e = 1^2 + 2^2 + \dots + n^2 = \dfrac{2n^3 + 3n^2 + n}{6}\)</span>), and let <span class="arithmatex">\(S^{2}_a\)</span> be the actual sum of the given numbers squared.</p>
+<div class="arithmatex">\[
+\begin{align}
+S^{2}_e - m^2 + r^2 &amp;= S^{2}_a \\
+S^{2}_e - S^{2}_a &amp;= m^2 - r^2 \\
+S^{2}_e - S^{2}_a &amp;= (m + r)(m - r) \\
+\\
+\dfrac{S^{2}_e - S^{2}_a}{S_e - S_a} &amp;= m + r
+\end{align}
+\]</div>
 <details>
 <summary>Implementation</summary>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">maxProfit</span><span class="p">(</span><span class="n">prices</span><span class="p">:</span><span class="w"> </span><span class="n">IntArray</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="c1">// assume the first element is the first local minima</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nv">minima</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prices</span><span class="o">[</span><span class="m">0</span><span class="o">]</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nv">profit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">missingRepeatingNumbers</span><span class="p">(</span><span class="n">nums</span><span class="p">:</span><span class="w"> </span><span class="n">IntArray</span><span class="p">):</span><span class="w"> </span><span class="n">Pair</span><span class="o">&lt;</span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kt">Int</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">size</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nv">`m - r`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nv">`m2 - r2`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="na">toDouble</span><span class="p">(),</span><span class="w"> </span><span class="m">3.</span><span class="n">toDouble</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="na">toDouble</span><span class="p">(),</span><span class="w"> </span><span class="m">2.</span><span class="n">toDouble</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">6</span><span class="p">).</span><span class="na">toInt</span><span class="p">()</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">prices</span><span class="p">.</span><span class="na">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prices</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="m">1</span><span class="o">]</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">curr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prices</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="c1">// Price droped, found a new minima.</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">curr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">prev</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="n">profit</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">prev</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">minima</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="n">minima</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curr</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="c1">// Account for having monotonically increasing prices.</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="n">profit</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">prices</span><span class="p">.</span><span class="na">last</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">minima</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">profit</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">`m - r`</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">n</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">`m2 - r2`</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">`m + r`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`m2 - r2`</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">`m - r`</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">`m + r`</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">`m - r`</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">`m + r`</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">`m - r`</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">r</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
 </span></code></pre></div>
 </details>
 </details>
 <h2 id="unit-tests">Unit tests</h2>
 <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nd">@Test</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">first</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">maxProfit</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)))</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">.</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">7</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">missingRepeatingNumbers</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)))</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">.</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// 2 is missing, 3 is repeating</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nd">@Test</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">second</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">maxProfit</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)))</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">.</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">missingRepeatingNumbers</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)))</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">.</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">5</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// 5 is missing, 1 is repeating</span>
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nd">@Test</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">third</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">maxProfit</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)))</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="p">.</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">}</span>
 </span></code></pre></div>
 
 
