@@ -3,7 +3,7 @@
 !!! info "try"
     - index: 334
     - difficulty: medium
-    - [Increasing Triplet Subsequencey](https://leetcode.com/problems/increasing-triplet-subsequence/description/)
+    - [Increasing Triplet Subsequence](https://leetcode.com/problems/increasing-triplet-subsequence/description/)
 
 
 ## Description
