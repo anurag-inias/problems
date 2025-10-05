@@ -80,6 +80,7 @@ nav:
   - About: "index.md"
   - Techniques:
     - Pack two integers in one: "techniques/001-pack-two-integers-in-one.md"
+    - Prefix/Suffix arrays: "techniques/002-prefix-suffix-arrays.md"
   - Array:
     - Basic:
       - Remove duplicates: "array/001-remove-duplicates.md"
@@ -99,3 +100,4 @@ nav:
       - Missing and repeating number in list of first N natural numbers: "array/014-missing-and-repeating-in-natural-numbers.md"
       - Increasing triplets: "array/015-increasing-triplet.md"
       - Maximum sum subarray: "array/016-maximum-sum-subarray.md"
+      - Equilibrium Index: "array/017-equilibrium-index.md"
