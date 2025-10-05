@@ -82,6 +82,7 @@ nav:
     - Pack two integers in one: "techniques/001-pack-two-integers-in-one.md"
     - Prefix/Suffix arrays: "techniques/002-prefix-suffix-arrays.md"
     - Converging pointers: "techniques/003-converging-pointers.md"
+    - Seen map: "techniques/004-seen-map.md"
   - Array:
     - Basic:
       - Remove duplicates: "array/001-remove-duplicates.md"
@@ -102,3 +103,4 @@ nav:
       - Increasing triplets: "array/015-increasing-triplet.md"
       - Maximum sum subarray: "array/016-maximum-sum-subarray.md"
       - Equilibrium Index: "array/017-equilibrium-index.md"
+      - Two sum: "array/018-two-sum.md"
