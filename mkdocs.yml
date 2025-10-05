@@ -78,6 +78,8 @@ extra_css:
 
 nav:
   - About: "index.md"
+  - Techniques:
+    - Pack two integers in one: "techniques/001-pack-two-integers-in-one.md"
   - Array:
     - Basic:
       - Remove duplicates: "array/001-remove-duplicates.md"
