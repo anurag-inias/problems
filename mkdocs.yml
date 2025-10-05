@@ -81,6 +81,7 @@ nav:
   - Techniques:
     - Pack two integers in one: "techniques/001-pack-two-integers-in-one.md"
     - Prefix/Suffix arrays: "techniques/002-prefix-suffix-arrays.md"
+    - Converging pointers: "techniques/003-converging-pointers.md"
   - Array:
     - Basic:
       - Remove duplicates: "array/001-remove-duplicates.md"
