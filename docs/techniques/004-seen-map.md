@@ -3,7 +3,7 @@
 Traverse a list in left-to-right or right-to-left direction while saving the elements seen into a map.
 
 $$
-seen[value] = index
+seen[a_i] = i
 $$
 
 ## Variant

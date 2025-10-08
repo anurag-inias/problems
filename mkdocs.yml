@@ -104,3 +104,4 @@ nav:
       - Maximum sum subarray: "array/016-maximum-sum-subarray.md"
       - Equilibrium Index: "array/017-equilibrium-index.md"
       - Two sum: "array/018-two-sum.md"
+      - Split array into equal sum segments: "array/019-split-array-into-equal-sum-segments.md"
