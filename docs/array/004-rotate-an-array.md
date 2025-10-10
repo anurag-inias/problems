@@ -22,6 +22,8 @@ output = [4, 5, 6, 1, 2, 3]
 
     Juggling Algorithm. The core idea is to divide the array into gcd(n, k) sets. Each set's elements are rotated among themselves.
 
+    ![](004b.svg)
+
     ??? "Pseudocode"
 
         First sanitize the input. $k$ can be greater than `nums.length` or even negative. 
