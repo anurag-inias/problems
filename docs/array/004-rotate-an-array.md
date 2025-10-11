@@ -18,11 +18,107 @@ output = [4, 5, 6, 1, 2, 3]
 
 ## Solution
 
+
 ??? "Approach 1"
 
     Juggling Algorithm. The core idea is to divide the array into gcd(n, k) sets. Each set's elements are rotated among themselves.
 
-    ![](004b.svg)
+    === "$n = 18, k = 12, \ \text{gcd}(12, 18) = 6$"
+
+        The algorithm divides the input array in $6$ sequences, each of which is rotated within itself.
+
+        $$
+        \begin{align}
+        & \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{\phantom 1 6} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 9} \ \boxed{10} \ \boxed{11} \ \boxed{12} \ \boxed{13} \ \boxed{14} \  \boxed{15} \ \boxed{16} \ \boxed{17} \\
+        \phantom{\text{group = 0 }} &
+        \end{align}
+        $$
+
+        $$
+        \begin{align}
+        \text{group = 0 } & \boxed{\phantom 1 \textbf{0}} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{\phantom 1 \textbf{6}} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 9} \ \boxed{10} \ \boxed{11} \ \boxed{\textbf{12}} \ \boxed{13} \ \boxed{14} \  \boxed{15} \ \boxed{16} \ \boxed{17} \\
+        & \boxed{\phantom 1 \textbf{6}} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{\textbf{12}} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 9} \ \boxed{10} \ \boxed{11} \ \boxed{\phantom 1 \textbf{0}} \ \boxed{13} \ \boxed{14} \  \boxed{15} \ \boxed{16} \ \boxed{17} \\
+        \end{align}
+        $$
+
+        $$
+        \begin{align}
+        \text{group = 1 } & \boxed{\phantom 1 6} \ \boxed{\phantom 1 \textbf 1} \ \boxed{\phantom 1 2} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{12} \ \boxed{\phantom 1 \textbf 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 9} \ \boxed{10} \ \boxed{11} \ \boxed{\phantom 1 0} \ \boxed{\textbf{13}} \ \boxed{14} \  \boxed{15} \ \boxed{16} \ \boxed{17} \\
+        & \boxed{\phantom 1 6} \ \boxed{\phantom 1 \textbf 7} \ \boxed{\phantom 1 2} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{12} \ \boxed{\textbf{13}} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 9} \ \boxed{10} \ \boxed{11} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 \textbf 1} \ \boxed{14} \  \boxed{15} \ \boxed{16} \ \boxed{17} \\
+        \end{align}
+        $$
+
+        $$
+        \begin{align}
+        \text{group = 2 } & \boxed{\phantom 1 6} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 \textbf 2} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{12} \ \boxed{13} \ \boxed{\phantom 1 \textbf 8} \ \boxed{\phantom 1 9} \ \boxed{10} \ \boxed{11} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\textbf{14}} \  \boxed{15} \ \boxed{16} \ \boxed{17} \\
+        & \boxed{\phantom 1 6} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 \textbf 8} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{12} \ \boxed{13} \ \boxed{\textbf{14}} \ \boxed{\phantom 1 9} \ \boxed{10} \ \boxed{11} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 \textbf 2} \  \boxed{15} \ \boxed{16} \ \boxed{17} \\
+        \end{align}
+        $$
+
+        $$
+        \begin{align}
+        \text{group = 3 } & \boxed{\phantom 1 6} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 \textbf 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{12} \ \boxed{13} \ \boxed{14} \ \boxed{\phantom 1 \textbf 9} \ \boxed{10} \ \boxed{11} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \  \boxed{\textbf{15}} \ \boxed{16} \ \boxed{17} \\
+        & \boxed{\phantom 1 6} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 \textbf 9} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{12} \ \boxed{13} \ \boxed{14} \ \boxed{\textbf{15}} \ \boxed{10} \ \boxed{11} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \  \boxed{\phantom 1 \textbf 3} \ \boxed{16} \ \boxed{17} \\
+        \end{align}
+        $$
+
+        $$
+        \begin{align}
+        \text{group = 4 } & \boxed{\phantom 1 6} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 9} \ \boxed{\phantom 1 \textbf 4} \ \boxed{\phantom 1 5} \ \boxed{12} \ \boxed{13} \ \boxed{14} \ \boxed{15} \ \boxed{\textbf{10}} \ \boxed{11} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \  \boxed{\phantom 1 3} \ \boxed{\textbf{16}} \ \boxed{17} \\
+        & \boxed{\phantom 1 6} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 9} \ \boxed{\textbf{10}} \ \boxed{\phantom 1 5} \ \boxed{12} \ \boxed{13} \ \boxed{14} \ \boxed{15} \ \boxed{\textbf{16}} \ \boxed{11} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \  \boxed{\phantom 1 3} \ \boxed{\phantom 4 \textbf 4} \ \boxed{17} \\
+        \end{align}
+        $$
+
+        $$
+        \begin{align}
+        \text{group = 5 } & \boxed{\phantom 1 6} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 9} \ \boxed{10} \ \boxed{\phantom 1 \textbf 5} \ \boxed{12} \ \boxed{13} \ \boxed{14} \ \boxed{15} \ \boxed{16} \ \boxed{\textbf{11}} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \  \boxed{\phantom 1 3} \ \boxed{\phantom 4 4} \ \boxed{\textbf{17}} \\
+        & \boxed{\phantom 1 6} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 9} \ \boxed{10} \ \boxed{\textbf{11}} \ \boxed{12} \ \boxed{13} \ \boxed{14} \ \boxed{15} \ \boxed{16} \ \boxed{\textbf{17}} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \  \boxed{\phantom 1 3} \ \boxed{\phantom 4 4} \ \boxed{\phantom 1 \textbf{5}} \\
+        \end{align}
+        $$
+
+        $$
+        \begin{align}
+        & \boxed{\phantom 1 6} \ \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 9} \ \boxed{10} \ \boxed{11} \ \boxed{12} \ \boxed{13} \ \boxed{14} \ \boxed{15} \ \boxed{16} \ \boxed{17} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \  \boxed{\phantom 1 3} \ \boxed{\phantom 4 4} \ \boxed{\phantom 1 5} \\
+        \phantom{\text{group = 0 }} &
+        \end{align}
+        $$
+
+    === "$n = 7, k = 3, \ \text{gcd}(7, 3) = 1$"
+
+        The algorithm divides the input array in just $1$ sequence. This sequence ends up wrapping around the array, covering all indices.
+
+        $$
+        \begin{align}
+        & \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{\phantom 1 6} \\
+        \phantom{\text{group = 0 }} &
+        \end{align}
+        $$
+
+        $$
+        \begin{align}
+        \text{group = 0 } & \boxed{\phantom 1 \textbf 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \ \boxed{\phantom 1 \textbf 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{\phantom 1 \textbf 6} \\
+        & \boxed{\phantom 1 7} \ \boxed{\phantom 1 8} \ \boxed{\phantom 1 \textbf 9} \ \boxed{10} \ \boxed{11} \ \boxed{\textbf{12}} \ \boxed{13} = \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 \textbf 2} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 \textbf 5} \ \boxed{\phantom 1 6} \\
+        & \boxed{14} \ \boxed{\textbf {15}} \ \boxed{16} \ \boxed{17} \ \boxed{\textbf{18}} \ \boxed{19} \ \boxed{20} = \boxed{\phantom 1 0} \ \boxed{\phantom 1 \textbf 1} \ \boxed{\phantom 1 2} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 \textbf 4} \ \boxed{\phantom 1 5} \ \boxed{\phantom 1 6} \\
+        & \boxed{\textbf{21}} \ \boxed{22} \ \boxed{23}  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ = \boxed{\phantom 1 \textbf 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \\
+        \phantom{\text{group = 0 }} &
+        \end{align}
+        $$
+
+        This means that $0$ is overwritten with $3$, which is overwritten with $6$ and so on:
+
+        $$
+        \begin{align}
+        \phantom 1 0 \leftarrow \phantom 1 3 \leftarrow \phantom 1 6 & \leftarrow \phantom 1 9 (2) \leftarrow 12 (5) \leftarrow 15 (1) \leftarrow 18 (4) \leftarrow 21 (0) \\
+        \end{align}
+        $$
+
+        $$
+        \begin{align}
+        & \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \ \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{\phantom 1 6} \\
+        & \boxed{\phantom 1 3} \ \boxed{\phantom 1 4} \ \boxed{\phantom 1 5} \ \boxed{\phantom 1 6} \ \boxed{\phantom 1 0} \ \boxed{\phantom 1 1} \ \boxed{\phantom 1 2} \\
+        \phantom{\text{group = 0 }} &
+        \end{align}
+        $$
 
     ??? "Pseudocode"
 
