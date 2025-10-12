@@ -109,3 +109,4 @@ nav:
       - Maximum consecutive ones after flipping zeros: "array/020-maximum-consecutive-ones.md"
     - Medium:
       - Rearrange array to be a<sub>i</sub> = i: "array/021-rearrange-to-be-ai-i.md"
+      - Maximum sum circular subarray = i: "array/022-max-sum-circular-subarray.md"
