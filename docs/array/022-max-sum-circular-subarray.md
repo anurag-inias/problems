@@ -30,6 +30,8 @@ Output: [3, 4, 5]
 	- Then check the default, non-circular min-sum subarray. The complement of this is the circular max-sum subarray.
 	- Pick the larger of the two.
 
+    ??? "Implementation"
+
 		```kotlin 
 		fun maxSubarraySumCircular(nums: IntArray): List<Int> {
 			// Non-circular max-sum subarray.
