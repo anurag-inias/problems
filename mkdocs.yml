@@ -114,3 +114,4 @@ nav:
       - Reorder by index array: "array/023-reorder-by-index-array.md"
       - Product of array except self: "array/024-product-of-array-except-self.md"
       - k-th largest subarray sum: "array/025-kth-largest-subarray-sum.md"
+      - Smallest missing number in sorted array: "array/026-smallest-missing-in-sorted-array.md"
