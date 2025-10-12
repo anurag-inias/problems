@@ -107,3 +107,5 @@ nav:
       - Two sum: "array/018-two-sum.md"
       - Split array into equal sum segments: "array/019-split-array-into-equal-sum-segments.md"
       - Maximum consecutive ones after flipping zeros: "array/020-maximum-consecutive-ones.md"
+    - Medium:
+      - Rearrange array to be a<sub>i</sub> = i: "array/021-rearrange-to-be-ai-i.md"
