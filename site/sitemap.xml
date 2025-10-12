@@ -120,4 +120,8 @@
          <loc>https://listless.dev/techniques/005-sliding-window/</loc>
          <lastmod>2025-10-12</lastmod>
     </url>
+    <url>
+         <loc>https://listless.dev/techniques/006-fixed-size-heap/</loc>
+         <lastmod>2025-10-12</lastmod>
+    </url>
 </urlset>

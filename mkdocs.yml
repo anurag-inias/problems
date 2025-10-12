@@ -84,6 +84,7 @@ nav:
     - Converging pointers: "techniques/003-converging-pointers.md"
     - Seen map: "techniques/004-seen-map.md"
     - Sliding window: "techniques/005-sliding-window.md"
+    - Fixed size heap: "techniques/006-fixed-size-heap.md"
   - Array:
     - Basic:
       - Remove duplicates: "array/001-remove-duplicates.md"
