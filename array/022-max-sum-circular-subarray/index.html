@@ -1276,8 +1276,10 @@
 <ul>
 <li>First check the default, non-circular max-sum subarray.</li>
 <li>Then check the default, non-circular min-sum subarray. The complement of this is the circular max-sum subarray.</li>
-<li>
-<p>Pick the larger of the two.</p>
+<li>Pick the larger of the two.</li>
+</ul>
+<details>
+<summary>Implementation</summary>
 <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">maxSubarraySumCircular</span><span class="p">(</span><span class="n">nums</span><span class="p">:</span><span class="w"> </span><span class="n">IntArray</span><span class="p">):</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="c1">// Non-circular max-sum subarray.</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">positive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">sliceArray</span><span class="p">(</span><span class="n">kadane</span><span class="p">(</span><span class="n">nums</span><span class="p">))</span>
@@ -1323,8 +1325,7 @@
 </span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">best</span>
 </span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="p">}</span>
 </span></code></pre></div>
-</li>
-</ul>
+</details>
 </details>
 <h2 id="unit-tests">Unit tests</h2>
 <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nd">@Test</span>
