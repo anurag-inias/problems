@@ -113,3 +113,4 @@ nav:
       - Maximum sum circular subarray: "array/022-max-sum-circular-subarray.md"
       - Reorder by index array: "array/023-reorder-by-index-array.md"
       - Product of array except self: "array/024-product-of-array-except-self.md"
+      - k-th largest subarray sum: "array/025-kth-largest-subarray-sum.md"
