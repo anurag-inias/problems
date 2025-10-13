@@ -1602,7 +1602,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |1765|[Map of Highest Peak](https://leetcode.com/problems/map-of-highest-peak)|75.4%|Medium|
 |1766|[Tree of Coprimes](https://leetcode.com/problems/tree-of-coprimes)|43.0%|Hard|
 |1768|[Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately)|82.1%|Easy|
-|1769|[Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)|90.1%|Medium|
+|1769|[Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)|90.1%|Medium|[1769 :material-open-in-app:](catalogue/1769-minimum-number-of-operations-to-move-all-balls-to-each-box.md)|
 |1770|[Maximum Score from Performing Multiplication Operations](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations)|42.7%|Hard|
 |1771|[Maximize Palindrome Length From Subsequences](https://leetcode.com/problems/maximize-palindrome-length-from-subsequences)|37.8%|Hard|
 |1772|[Sort Features by Popularity](https://leetcode.com/problems/sort-features-by-popularity)|66.2%|Medium|
