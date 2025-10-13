@@ -1732,7 +1732,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |1915|[Number of Wonderful Substrings](https://leetcode.com/problems/number-of-wonderful-substrings)|66.7%|Medium|
 |1916|[Count Ways to Build Rooms in an Ant Colony](https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony)|49.4%|Hard|
 |1918|[Kth Smallest Subarray Sum](https://leetcode.com/problems/kth-smallest-subarray-sum)|52.7%|Medium|
-|1920|[Build Array from Permutation](https://leetcode.com/problems/build-array-from-permutation)|91.0%|Easy|
+|1920|[Build Array from Permutation](https://leetcode.com/problems/build-array-from-permutation)|91.0%|Easy|[1920 :material-open-in-app:](catalogue/1920-build-array-from-permutation.md)|
 |1921|[Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters)|50.9%|Medium|
 |1922|[Count Good Numbers](https://leetcode.com/problems/count-good-numbers)|57.1%|Medium|
 |1923|[Longest Common Subpath](https://leetcode.com/problems/longest-common-subpath)|28.8%|Hard|
