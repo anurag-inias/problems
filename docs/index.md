@@ -1741,7 +1741,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |1926|[Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze)|48.0%|Medium|
 |1927|[Sum Game](https://leetcode.com/problems/sum-game)|48.8%|Medium|
 |1928|[Minimum Cost to Reach Destination in Time](https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time)|40.5%|Hard|
-|1929|[Concatenation of Array](https://leetcode.com/problems/concatenation-of-array)|90.6%|Easy|
+|1929|[Concatenation of Array](https://leetcode.com/problems/concatenation-of-array)|90.6%|Easy|:material-check:|
 |1930|[Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences)|71.0%|Medium|
 |1931|[Painting a Grid With Three Different Colors](https://leetcode.com/problems/painting-a-grid-with-three-different-colors)|78.0%|Hard|
 |1932|[Merge BSTs to Create Single BST](https://leetcode.com/problems/merge-bsts-to-create-single-bst)|36.8%|Hard|
@@ -2234,7 +2234,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |2466|[Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings)|59.1%|Medium|
 |2467|[Most Profitable Path in a Tree](https://leetcode.com/problems/most-profitable-path-in-a-tree)|67.4%|Medium|
 |2468|[Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit)|42.1%|Hard|
-|2469|[Convert the Temperature](https://leetcode.com/problems/convert-the-temperature)|90.2%|Easy|
+|2469|[Convert the Temperature](https://leetcode.com/problems/convert-the-temperature)|90.2%|Easy|:material-check:|
 |2470|[Number of Subarrays With LCM Equal to K](https://leetcode.com/problems/number-of-subarrays-with-lcm-equal-to-k)|42.1%|Medium|
 |2471|[Minimum Number of Operations to Sort a Binary Tree by Level](https://leetcode.com/problems/minimum-number-of-operations-to-sort-a-binary-tree-by-level)|74.3%|Medium|
 |2472|[Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings)|42.3%|Hard|
@@ -2467,7 +2467,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |2766|[Relocate Marbles](https://leetcode.com/problems/relocate-marbles)|50.7%|Medium|
 |2767|[Partition String Into Minimum Beautiful Substrings](https://leetcode.com/problems/partition-string-into-minimum-beautiful-substrings)|53.4%|Medium|
 |2768|[Number of Black Blocks](https://leetcode.com/problems/number-of-black-blocks)|40.2%|Medium|
-|2769|[Find the Maximum Achievable Number](https://leetcode.com/problems/find-the-maximum-achievable-number)|91.0%|Easy|
+|2769|[Find the Maximum Achievable Number](https://leetcode.com/problems/find-the-maximum-achievable-number)|91.0%|Easy|:material-check:|
 |2770|[Maximum Number of Jumps to Reach the Last Index](https://leetcode.com/problems/maximum-number-of-jumps-to-reach-the-last-index)|32.0%|Medium|
 |2771|[Longest Non-decreasing Subarray From Two Arrays](https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays)|30.5%|Medium|
 |2772|[Apply Operations to Make All Array Elements Equal to Zero](https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero)|33.0%|Medium|
@@ -2603,7 +2603,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |2939|[Maximum Xor Product](https://leetcode.com/problems/maximum-xor-product)|28.5%|Medium|
 |2940|[Find Building Where Alice and Bob Can Meet](https://leetcode.com/problems/find-building-where-alice-and-bob-can-meet)|52.2%|Hard|
 |2941|[Maximum GCD-Sum of a Subarray](https://leetcode.com/problems/maximum-gcd-sum-of-a-subarray)|36.9%|Hard|
-|2942|[Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character)|90.5%|Easy|
+|2942|[Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character)|90.5%|Easy|:material-check:|
 |2943|[Maximize Area of Square Hole in Grid](https://leetcode.com/problems/maximize-area-of-square-hole-in-grid)|37.4%|Medium|
 |2944|[Minimum Number of Coins for Fruits](https://leetcode.com/problems/minimum-number-of-coins-for-fruits)|47.8%|Medium|
 |2945|[Find Maximum Non-decreasing Array Length](https://leetcode.com/problems/find-maximum-non-decreasing-array-length)|17.5%|Hard|
