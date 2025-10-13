@@ -121,6 +121,10 @@
          <lastmod>2025-10-13</lastmod>
     </url>
     <url>
+         <loc>https://listless.dev/catalogue/1863-sum-of-all-subset-xor-totals/</loc>
+         <lastmod>2025-10-13</lastmod>
+    </url>
+    <url>
          <loc>https://listless.dev/catalogue/1920-build-array-from-permutation/</loc>
          <lastmod>2025-10-13</lastmod>
     </url>
@@ -154,6 +158,10 @@
     </url>
     <url>
          <loc>https://listless.dev/techniques/006-fixed-size-heap/</loc>
+         <lastmod>2025-10-13</lastmod>
+    </url>
+    <url>
+         <loc>https://listless.dev/techniques/007-powerset/</loc>
          <lastmod>2025-10-13</lastmod>
     </url>
 </urlset>

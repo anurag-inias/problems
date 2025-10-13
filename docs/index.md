@@ -1683,7 +1683,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |1860|[Incremental Memory Leak](https://leetcode.com/problems/incremental-memory-leak)|72.8%|Medium|
 |1861|[Rotating the Box](https://leetcode.com/problems/rotating-the-box)|79.2%|Medium|
 |1862|[Sum of Floored Pairs](https://leetcode.com/problems/sum-of-floored-pairs)|30.2%|Hard|
-|1863|[Sum of All Subset XOR Totals](https://leetcode.com/problems/sum-of-all-subset-xor-totals)|90.1%|Easy|
+|1863|[Sum of All Subset XOR Totals](https://leetcode.com/problems/sum-of-all-subset-xor-totals)|90.1%|Easy|[1863 :material-open-in-app:](catalogue/1863-sum-of-all-subset-xor-totals.md)|
 |1864|[Minimum Number of Swaps to Make the Binary String Alternating](https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-binary-string-alternating)|43.7%|Medium|
 |1865|[Finding Pairs With a Certain Sum](https://leetcode.com/problems/finding-pairs-with-a-certain-sum)|61.7%|Medium|
 |1866|[Number of Ways to Rearrange Sticks With K Sticks Visible](https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible)|58.3%|Hard|

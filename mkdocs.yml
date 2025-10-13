@@ -88,6 +88,7 @@ nav:
     - Seen map: "techniques/004-seen-map.md"
     - Sliding window: "techniques/005-sliding-window.md"
     - Fixed size heap: "techniques/006-fixed-size-heap.md"
+    - Powerset generation: "techniques/007-powerset.md"
   - Array:
     - Basic:
       - Remove duplicates: "array/001-remove-duplicates.md"
