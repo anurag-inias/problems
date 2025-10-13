@@ -2,6 +2,9 @@
 
 Subsite to catalogue some of the common programming problems. I had to create this separately because `mkdocs` was starting to show signs of slowdown with as many pages as the root site had (not many).
 
+- :material-check: trivial problems
+- :material-lock: locked problems
+
 |#| Description | Acceptance Rate | Difficulty |Link|
 |-|-------------|------------------|-----------|----|
 |1|[Two Sum](https://leetcode.com/problems/two-sum)|56.4%|Easy|
@@ -1052,7 +1055,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |1110|[Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest)|72.4%|Medium|
 |1111|[Maximum Nesting Depth of Two Valid Parentheses Strings](https://leetcode.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings)|71.6%|Medium|
 |1118|[Number of Days in a Month](https://leetcode.com/problems/number-of-days-in-a-month)|59.1%|Easy|
-|1119|[Remove Vowels from a String](https://leetcode.com/problems/remove-vowels-from-a-string)|91.3%|Easy|
+|1119|[Remove Vowels from a String](https://leetcode.com/problems/remove-vowels-from-a-string)|91.3%|Easy|:material-lock:|
 |1120|[Maximum Average Subtree](https://leetcode.com/problems/maximum-average-subtree)|66.9%|Medium|
 |1121|[Divide Array Into Increasing Sequences](https://leetcode.com/problems/divide-array-into-increasing-sequences)|65.1%|Hard|
 |1122|[Relative Sort Array](https://leetcode.com/problems/relative-sort-array)|75.0%|Easy|
@@ -2553,7 +2556,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |2875|[Minimum Size Subarray in Infinite Array](https://leetcode.com/problems/minimum-size-subarray-in-infinite-array)|31.5%|Medium|
 |2876|[Count Visited Nodes in a Directed Graph](https://leetcode.com/problems/count-visited-nodes-in-a-directed-graph)|29.7%|Hard|
 |2892|[Minimizing Array After Replacing Pairs With Their Product](https://leetcode.com/problems/minimizing-array-after-replacing-pairs-with-their-product)|40.7%|Medium|
-|2894|[Divisible and Non-divisible Sums Difference](https://leetcode.com/problems/divisible-and-non-divisible-sums-difference)|91.2%|Easy|
+|2894|[Divisible and Non-divisible Sums Difference](https://leetcode.com/problems/divisible-and-non-divisible-sums-difference)|91.2%|Easy|[2894 :material-open-in-app:](catalogue/2894-divisible-and-non-divisible-sums-difference.md)|
 |2895|[Minimum Processing Time](https://leetcode.com/problems/minimum-processing-time)|69.7%|Medium|
 |2896|[Apply Operations to Make Two Strings Equal](https://leetcode.com/problems/apply-operations-to-make-two-strings-equal)|27.4%|Medium|
 |2897|[Apply Operations on Array to Maximize Sum of Squares](https://leetcode.com/problems/apply-operations-on-array-to-maximize-sum-of-squares)|43.8%|Hard|
@@ -2741,7 +2744,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |3107|[Minimum Operations to Make Median of Array Equal to K](https://leetcode.com/problems/minimum-operations-to-make-median-of-array-equal-to-k)|47.2%|Medium|
 |3108|[Minimum Cost Walk in Weighted Graph](https://leetcode.com/problems/minimum-cost-walk-in-weighted-graph)|68.3%|Hard|
 |3109|[Find the Index of Permutation](https://leetcode.com/problems/find-the-index-of-permutation)|34.9%|Medium|
-|3110|[Score of a String](https://leetcode.com/problems/score-of-a-string)|91.6%|Easy|
+|3110|[Score of a String](https://leetcode.com/problems/score-of-a-string)|91.6%|Easy|:material-check:|
 |3111|[Minimum Rectangles to Cover Points](https://leetcode.com/problems/minimum-rectangles-to-cover-points)|63.1%|Medium|
 |3112|[Minimum Time to Visit Disappearing Nodes](https://leetcode.com/problems/minimum-time-to-visit-disappearing-nodes)|36.5%|Medium|
 |3113|[Find the Number of Subarrays Where Boundary Elements Are Maximum](https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum)|31.8%|Hard|
