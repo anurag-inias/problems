@@ -7,13 +7,13 @@ body {
   counter-reset: problemcount;
 }
 .md-typeset__table tr td:first-child::before {
-  counter-increment: problemcount; /* Increment the value of section counter by 1 */
+  counter-increment: problemcount;
   content: counter(problemcount);
 }
 </style>
 
-|#| Description | Acceptance Rate | Difficulty |
-|-|-------------|------------------|-----------|
+|#| Description | Acceptance Rate | Difficulty |Link|
+|-|-------------|------------------|-----------|----|
 ||[1. Two Sum](https://leetcode.com/problems/two-sum)|56.4%|Easy|
 ||[2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers)|47.1%|Medium|
 ||[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)|37.7%|Medium|
@@ -2499,7 +2499,7 @@ body {
 ||[2801. Count Stepping Numbers in Range](https://leetcode.com/problems/count-stepping-numbers-in-range)|26.9%|Hard|
 ||[2802. Find The K-th Lucky Number](https://leetcode.com/problems/find-the-k-th-lucky-number)|76.2%|Medium|
 ||[2806. Account Balance After Rounded Purchase](https://leetcode.com/problems/account-balance-after-rounded-purchase)|55.7%|Easy|
-||[2807. Insert Greatest Common Divisors in Linked List](https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list)|91.5%|Medium|
+||[2807. Insert Greatest Common Divisors in Linked List](https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/description) |91.5%|Medium| 2807 [:material-open-in-app:](catalogue/2807-insert-greatest-common-divisors-in-linked-list.md) |
 ||[2808. Minimum Seconds to Equalize a Circular Array](https://leetcode.com/problems/minimum-seconds-to-equalize-a-circular-array)|27.9%|Medium|
 ||[2809. Minimum Time to Make Array Sum At Most x](https://leetcode.com/problems/minimum-time-to-make-array-sum-at-most-x)|26.3%|Hard|
 ||[2810. Faulty Keyboard](https://leetcode.com/problems/faulty-keyboard)|79.5%|Easy|
@@ -3238,13 +3238,3 @@ body {
 ||[3645. Maximum Total from Optimal Activation Order](https://leetcode.com/problems/maximum-total-from-optimal-activation-order)|35.6%|Medium|
 ||[3646. Next Special Palindrome Number](https://leetcode.com/problems/next-special-palindrome-number)|25.7%|Hard|
 ||[3647. Maximum Weight in Two Bags](https://leetcode.com/problems/maximum-weight-in-two-bags)|61.5%|Medium|
-
-
-<script>
-document$.subscribe(function() {
-  var tables = document.querySelectorAll("article table:not([class])")
-  tables.forEach(function(table) {
-    new Tablesort(table)
-  })
-})
-</script>
