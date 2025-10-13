@@ -1171,7 +1171,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |1261|[Find Elements in a Contaminated Binary Tree](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree)|84.1%|Medium|
 |1262|[Greatest Sum Divisible by Three](https://leetcode.com/problems/greatest-sum-divisible-by-three)|51.1%|Medium|
 |1263|[Minimum Moves to Move a Box to Their Target Location](https://leetcode.com/problems/minimum-moves-to-move-a-box-to-their-target-location)|49.1%|Hard|
-|1265|[Print Immutable Linked List in Reverse](https://leetcode.com/problems/print-immutable-linked-list-in-reverse)|94.1%|Medium|
+|1265|[Print Immutable Linked List in Reverse](https://leetcode.com/problems/print-immutable-linked-list-in-reverse)|94.1%|Medium|:material-lock:|
 |1266|[Minimum Time Visiting All Points](https://leetcode.com/problems/minimum-time-visiting-all-points)|82.6%|Easy|
 |1267|[Count Servers that Communicate](https://leetcode.com/problems/count-servers-that-communicate)|73.5%|Medium|
 |1268|[Search Suggestions System](https://leetcode.com/problems/search-suggestions-system)|65.1%|Medium|
@@ -2796,7 +2796,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |3169|[Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings)|48.0%|Medium|
 |3170|[Lexicographically Minimum String After Removing Stars](https://leetcode.com/problems/lexicographically-minimum-string-after-removing-stars)|51.0%|Medium|
 |3171|[Find Subarray With Bitwise OR Closest to K](https://leetcode.com/problems/find-subarray-with-bitwise-or-closest-to-k)|30.3%|Hard|
-|3173|[Bitwise OR of Adjacent Elements](https://leetcode.com/problems/bitwise-or-of-adjacent-elements)|94.9%|Easy|
+|3173|[Bitwise OR of Adjacent Elements](https://leetcode.com/problems/bitwise-or-of-adjacent-elements)|94.9%|Easy|:material-lock:|
 |3174|[Clear Digits](https://leetcode.com/problems/clear-digits)|82.6%|Easy|
 |3175|[Find The First Player to win K Games in a Row](https://leetcode.com/problems/find-the-first-player-to-win-k-games-in-a-row)|39.8%|Medium|
 |3176|[Find the Maximum Length of a Good Subsequence I](https://leetcode.com/problems/find-the-maximum-length-of-a-good-subsequence-i)|32.0%|Medium|
@@ -2875,7 +2875,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |3259|[Maximum Energy Boost From Two Drinks](https://leetcode.com/problems/maximum-energy-boost-from-two-drinks)|49.6%|Medium|
 |3260|[Find the Largest Palindrome Divisible by K](https://leetcode.com/problems/find-the-largest-palindrome-divisible-by-k)|15.8%|Hard|
 |3261|[Count Substrings That Satisfy K-Constraint II](https://leetcode.com/problems/count-substrings-that-satisfy-k-constraint-ii)|22.3%|Hard|
-|3263|[Convert Doubly Linked List to Array I](https://leetcode.com/problems/convert-doubly-linked-list-to-array-i)|94.8%|Easy|
+|3263|[Convert Doubly Linked List to Array I](https://leetcode.com/problems/convert-doubly-linked-list-to-array-i)|94.8%|Easy|:material-lock:|
 |3264|[Final Array State After K Multiplication Operations I](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i)|87.0%|Easy|
 |3265|[Count Almost Equal Pairs I](https://leetcode.com/problems/count-almost-equal-pairs-i)|37.8%|Medium|
 |3266|[Final Array State After K Multiplication Operations II](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-ii)|12.0%|Hard|
