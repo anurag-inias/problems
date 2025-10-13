@@ -116,3 +116,4 @@ nav:
       - k-th largest subarray sum: "array/025-kth-largest-subarray-sum.md"
       - Smallest missing number in sorted array: "array/026-smallest-missing-in-sorted-array.md"
       - Shortest subarray with given sum: "array/027-shortest-subarray-with-given-sum.md"
+      - Majority element: "array/028-majority-element.md"
