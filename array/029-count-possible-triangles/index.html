@@ -5,13 +5,11 @@
       
       
       
-        <link rel="canonical" href="https://listless.dev/techniques/002-prefix-suffix-arrays/">
+        <link rel="canonical" href="https://listless.dev/array/029-count-possible-triangles/">
       
       
-        <link rel="prev" href="../001-pack-two-integers-in-one/">
+        <link rel="prev" href="../028-majority-element/">
       
-      
-        <link rel="next" href="../003-converging-pointers/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Prefix/Suffix arrays - listless 💤</title>
+        <title>Count possible triangles - listless 💤</title>
       
     
     
@@ -88,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#prefixsuffix-arrays" class="md-skip">
+        <a href="#majority-element" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Prefix/Suffix arrays
+              Count possible triangles
             
           </span>
         </div>
@@ -223,20 +221,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -252,7 +248,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Techniques
@@ -266,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../001-pack-two-integers-in-one/" class="md-nav__link">
+      <a href="../../techniques/001-pack-two-integers-in-one/" class="md-nav__link">
         
   
   
@@ -286,30 +282,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Prefix/Suffix arrays
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../techniques/002-prefix-suffix-arrays/" class="md-nav__link">
         
   
   
@@ -320,51 +296,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prefixsuffix-arrays" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prefix/Suffix arrays
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avoiding-extra-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      Avoiding extra space
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#subarray-sums" class="md-nav__link">
-    <span class="md-ellipsis">
-      Subarray sums
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -377,7 +308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../003-converging-pointers/" class="md-nav__link">
+      <a href="../../techniques/003-converging-pointers/" class="md-nav__link">
         
   
   
@@ -400,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../004-seen-map/" class="md-nav__link">
+      <a href="../../techniques/004-seen-map/" class="md-nav__link">
         
   
   
@@ -423,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../005-sliding-window/" class="md-nav__link">
+      <a href="../../techniques/005-sliding-window/" class="md-nav__link">
         
   
   
@@ -446,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../006-fixed-size-heap/" class="md-nav__link">
+      <a href="../../techniques/006-fixed-size-heap/" class="md-nav__link">
         
   
   
@@ -469,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../007-powerset/" class="md-nav__link">
+      <a href="../../techniques/007-powerset/" class="md-nav__link">
         
   
   
@@ -496,18 +427,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -523,7 +456,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Array
@@ -575,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/001-remove-duplicates/" class="md-nav__link">
+      <a href="../001-remove-duplicates/" class="md-nav__link">
         
   
   
@@ -598,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/002-generate-all-subsequences/" class="md-nav__link">
+      <a href="../002-generate-all-subsequences/" class="md-nav__link">
         
   
   
@@ -621,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/003-generate-all-subarrays/" class="md-nav__link">
+      <a href="../003-generate-all-subarrays/" class="md-nav__link">
         
   
   
@@ -644,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/004-rotate-an-array/" class="md-nav__link">
+      <a href="../004-rotate-an-array/" class="md-nav__link">
         
   
   
@@ -667,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/005-minimum-operations-to-make-elements-equal/" class="md-nav__link">
+      <a href="../005-minimum-operations-to-make-elements-equal/" class="md-nav__link">
         
   
   
@@ -736,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/006-contains-duplicate-within-k-distance/" class="md-nav__link">
+      <a href="../006-contains-duplicate-within-k-distance/" class="md-nav__link">
         
   
   
@@ -759,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/007-rearrange-to-make-even-positions-greater-than-odds/" class="md-nav__link">
+      <a href="../007-rearrange-to-make-even-positions-greater-than-odds/" class="md-nav__link">
         
   
   
@@ -782,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/008-sum-of-all-subarrays/" class="md-nav__link">
+      <a href="../008-sum-of-all-subarrays/" class="md-nav__link">
         
   
   
@@ -805,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/009-buy-and-sell-stock-1/" class="md-nav__link">
+      <a href="../009-buy-and-sell-stock-1/" class="md-nav__link">
         
   
   
@@ -828,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/010-buy-and-sell-stock-2/" class="md-nav__link">
+      <a href="../010-buy-and-sell-stock-2/" class="md-nav__link">
         
   
   
@@ -851,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/011-unique-number/" class="md-nav__link">
+      <a href="../011-unique-number/" class="md-nav__link">
         
   
   
@@ -874,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/012-missing-in-natural-numbers/" class="md-nav__link">
+      <a href="../012-missing-in-natural-numbers/" class="md-nav__link">
         
   
   
@@ -897,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/013-repeating-in-natural-numbers/" class="md-nav__link">
+      <a href="../013-repeating-in-natural-numbers/" class="md-nav__link">
         
   
   
@@ -920,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/014-missing-and-repeating-in-natural-numbers/" class="md-nav__link">
+      <a href="../014-missing-and-repeating-in-natural-numbers/" class="md-nav__link">
         
   
   
@@ -943,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/015-increasing-triplet/" class="md-nav__link">
+      <a href="../015-increasing-triplet/" class="md-nav__link">
         
   
   
@@ -966,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/016-maximum-sum-subarray/" class="md-nav__link">
+      <a href="../016-maximum-sum-subarray/" class="md-nav__link">
         
   
   
@@ -989,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/017-equilibrium-index/" class="md-nav__link">
+      <a href="../017-equilibrium-index/" class="md-nav__link">
         
   
   
@@ -1012,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/018-two-sum/" class="md-nav__link">
+      <a href="../018-two-sum/" class="md-nav__link">
         
   
   
@@ -1035,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/019-split-array-into-equal-sum-segments/" class="md-nav__link">
+      <a href="../019-split-array-into-equal-sum-segments/" class="md-nav__link">
         
   
   
@@ -1058,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/020-maximum-consecutive-ones/" class="md-nav__link">
+      <a href="../020-maximum-consecutive-ones/" class="md-nav__link">
         
   
   
@@ -1086,18 +1019,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1113,7 +1048,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Medium
@@ -1127,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/021-rearrange-to-be-ai-i/" class="md-nav__link">
+      <a href="../021-rearrange-to-be-ai-i/" class="md-nav__link">
         
   
   
@@ -1150,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/022-max-sum-circular-subarray/" class="md-nav__link">
+      <a href="../022-max-sum-circular-subarray/" class="md-nav__link">
         
   
   
@@ -1173,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/023-reorder-by-index-array/" class="md-nav__link">
+      <a href="../023-reorder-by-index-array/" class="md-nav__link">
         
   
   
@@ -1196,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/024-product-of-array-except-self/" class="md-nav__link">
+      <a href="../024-product-of-array-except-self/" class="md-nav__link">
         
   
   
@@ -1219,7 +1154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/025-kth-largest-subarray-sum/" class="md-nav__link">
+      <a href="../025-kth-largest-subarray-sum/" class="md-nav__link">
         
   
   
@@ -1242,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/026-smallest-missing-in-sorted-array/" class="md-nav__link">
+      <a href="../026-smallest-missing-in-sorted-array/" class="md-nav__link">
         
   
   
@@ -1265,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/027-shortest-subarray-with-given-sum/" class="md-nav__link">
+      <a href="../027-shortest-subarray-with-given-sum/" class="md-nav__link">
         
   
   
@@ -1288,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../array/028-majority-element/" class="md-nav__link">
+      <a href="../028-majority-element/" class="md-nav__link">
         
   
   
@@ -1308,10 +1243,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../array/029-count-possible-triangles/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Count possible triangles
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1322,6 +1279,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit tests
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1359,6 +1372,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1367,27 +1382,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prefixsuffix-arrays" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
-      Prefix/Suffix arrays
+      Description
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoiding-extra-space" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Avoiding extra space
+      Example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#subarray-sums" class="md-nav__link">
+  <a href="#solution" class="md-nav__link">
     <span class="md-ellipsis">
-      Subarray sums
+      Solution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit tests
     </span>
   </a>
   
@@ -1409,55 +1433,119 @@
 
 
 
-  <h1>Prefix/Suffix arrays</h1>
-
-<h2 id="prefixsuffix-arrays">Prefix/Suffix arrays</h2>
-<p>This is a powerful technique to efficiently calculate the sum of elements within any subarray while traversing left or right.</p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IntArray</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">left</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="m">0</span><span class="o">]</span>
+<h1 id="majority-element">Majority element</h1>
+<div class="admonition info">
+<p class="admonition-title">try</p>
+<ul>
+<li>index: 611 </li>
+<li>difficulty: medium </li>
+<li><a href="https://leetcode.com/problems/valid-triangle-number/description/">Valid triangle number</a></li>
+</ul>
+</div>
+<h2 id="description">Description</h2>
+<p>Given an array of integers, return the number of valid triplets that can form a triangle. A triplet <span class="arithmatex">\((a, b, c)\)</span> forms a valid triangle if:</p>
+<ol>
+<li><span class="arithmatex">\(a + b &gt; c\)</span></li>
+<li><span class="arithmatex">\(b + c &gt; a\)</span></li>
+<li><span class="arithmatex">\(a + c &gt; b\)</span></li>
+</ol>
+<h2 id="example">Example</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Nums:    [4 6 3 7]
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Output:  3 [3 4 6] [4 6 7] [3 6 7]
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Nums:    [1 2 3]
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Output:  0
 </span></code></pre></div>
-<h2 id="avoiding-extra-space">Avoiding extra space</h2>
-<p>Sometimes it is possible to avoid the auxiliary space allotment. Instead of saving the prefix/suffix sums, you can calculated on the fly:</p>
+<h2 id="solution">Solution</h2>
+<details>
+<summary>First approach</summary>
+<div class="language-text highlight"><pre><span></span><code>Simply run three nested loop for $a$, $b$ and $c$ in $O(n^3)$ time.
+</code></pre></div>
+</details>
+<details>
+<summary>Second approach</summary>
+<ul>
+<li>Sort the array first (<span class="arithmatex">\(O(n \log n)\)</span>).</li>
+<li>Run a loop for <span class="arithmatex">\(c\)</span>, assuming it to be the largest number, over index range <span class="arithmatex">\([2, n)\)</span>.</li>
+<li>
+<p>Use two pointer method for finding <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>, intialized to <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(c-1\)</span>.</p>
+<p>In each iteration of the inner loop, compare the sum <span class="arithmatex">\(a + b\)</span> vs <span class="arithmatex">\(c\)</span>. Since <span class="arithmatex">\(c\)</span> is the largest value:</p>
 <div class="arithmatex">\[
 \begin{align}
-S_l + n + S_r &amp;= S \\
-S_r &amp;= S - n - S_l
+&amp; \textbf{if } a + b &gt; c \text{ then } \\
+&amp; \implies a + c &gt; b \\
+&amp; \text{ and } \ \ b + c &gt; a
 \end{align}
 \]</div>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">sum</span><span class="p">()</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">var</span><span class="w"> </span><span class="nv">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">indices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="c1">// You logic goes here.</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="n">left</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
-</span></code></pre></div>
-<h2 id="subarray-sums">Subarray sums</h2>
-<p>Prefix sum array can be used to calculate the sum of arbitrary subarrays in <span class="arithmatex">\(O(1)\)</span> time. However, if you are checking all subarrays, that'll anyway take <span class="arithmatex">\(O(n^2)\)</span> to enumerate. </p>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IntArray</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">prefix</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="m">0</span><span class="o">]</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="n">prefix</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">// Arbitrary subarray [start, end].</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">prefix</span><span class="o">[</span><span class="n">start</span><span class="o">-</span><span class="m">1</span><span class="o">]</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kd">val</span><span class="w"> </span><span class="nv">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix</span><span class="o">[</span><span class="n">end</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">prev</span>
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[1, 2, 3, 4, 5, 6]
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>nums[0:0] = 1, nums[0:1] = 3, nums[0:2] = 6, nums[0:3] = 10, nums[0:4] = 15, nums[0:5] = 21
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>nums[1:1] = 2, nums[1:2] = 5, nums[1:3] = 9, nums[1:4] = 14, nums[1:5] = 20
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>nums[2:2] = 3, nums[2:3] = 7, nums[2:4] = 12, nums[2:5] = 18
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>nums[3:3] = 4, nums[3:4] = 9, nums[3:5] = 15
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>nums[4:4] = 5, nums[4:5] = 11
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>nums[5:5] = 6
+</li>
+</ul>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">triangleNumber</span><span class="p">(</span><span class="n">nums</span><span class="p">:</span><span class="w"> </span><span class="n">IntArray</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="n">nums</span><span class="p">.</span><span class="na">sort</span><span class="p">()</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">            </span><span class="k">when</span><span class="p">((</span><span class="n">nums</span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">b</span><span class="o">]</span><span class="p">).</span><span class="na">compareTo</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">c</span><span class="o">]</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">                </span><span class="o">-</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="o">++</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">                </span><span class="m">1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">                    </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">                    </span><span class="n">b</span><span class="o">--</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">count</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>The whole thing runs in <span class="arithmatex">\(O(n^2)\)</span>.</p>
+</details>
+<h2 id="unit-tests">Unit tests</h2>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nd">@Test</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">first</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">assertThat</span><span class="p">(</span><span class="n">triangleNumber</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">))).</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nd">@Test</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">second</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">assertThat</span><span class="p">(</span><span class="n">triangleNumber</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">))).</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nd">@Test</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">third</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">assertThat</span><span class="p">(</span><span class="n">triangleNumber</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">))).</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">}</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nd">@Test</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">fourth</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="n">assertThat</span><span class="p">(</span><span class="n">triangleNumber</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">21</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">101</span><span class="p">,</span><span class="w"> </span><span class="m">200</span><span class="p">,</span><span class="w"> </span><span class="m">300</span><span class="p">))).</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">6</span><span class="p">)</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="p">}</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="nd">@Test</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">fifth</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="n">assertThat</span><span class="p">(</span><span class="n">triangleNumber</span><span class="p">(</span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">))).</span><span class="na">isEqualTo</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="p">}</span>
 </span></code></pre></div>
 
 
