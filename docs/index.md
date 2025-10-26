@@ -576,7 +576,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |605|[Can Place Flowers](https://leetcode.com/problems/can-place-flowers)|29.0%|Easy|
 |606|[Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree)|70.4%|Medium|
 |609|[Find Duplicate File in System](https://leetcode.com/problems/find-duplicate-file-in-system)|67.6%|Medium|
-|611|[Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number)|56.3%|Medium|
+|611|[Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number)|56.3%|Medium|[1769 :material-open-in-app:](array/029-count-possible-triangles.md)|
 |616|[Add Bold Tag in String](https://leetcode.com/problems/add-bold-tag-in-string)|51.2%|Medium|
 |617|[Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees)|78.9%|Easy|
 |621|[Task Scheduler](https://leetcode.com/problems/task-scheduler)|62.1%|Medium|
@@ -1437,7 +1437,7 @@ Subsite to catalogue some of the common programming problems. I had to create th
 |1567|[Maximum Length of Subarray With Positive Product](https://leetcode.com/problems/maximum-length-of-subarray-with-positive-product)|44.5%|Medium|
 |1568|[Minimum Number of Days to Disconnect Island](https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island)|58.9%|Hard|
 |1569|[Number of Ways to Reorder Array to Get Same BST](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst)|53.8%|Hard|
-|1570|[Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors)|89.9%|Medium|
+|1570|[Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors)|89.9%|Medium|:material-lock:|
 |1572|[Matrix Diagonal Sum](https://leetcode.com/problems/matrix-diagonal-sum)|83.9%|Easy|
 |1573|[Number of Ways to Split a String](https://leetcode.com/problems/number-of-ways-to-split-a-string)|34.1%|Medium|
 |1574|[Shortest Subarray to be Removed to Make Array Sorted](https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted)|51.4%|Medium|
