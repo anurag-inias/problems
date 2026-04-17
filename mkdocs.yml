@@ -6,7 +6,7 @@ theme:
   favicon: assets/fatigue-dark.svg
   font:
     text: "Besley Medium"
-    code: "Mullet"
+    code: "Google Sans Code Medium"
   features:
     - content.code.copy
     - content.code.annotate
@@ -79,7 +79,13 @@ extra_css:
   - assets/extra.css
 
 nav:
-  - About: "index.md"
+  - <a href="https://listless.dev">↖ Back</a>: "back"
+  - Stack:
+      - Basic:
+          - The Celebrity Problem: "stack/01.md"
+          - Implement Queue using Stack: "stack/02.md"
+          - Implement two stack in an array: "stack/03.md"
+          - Infix to Postfix Expression: "stack/04.md"
   - Array:
       - Basic:
           - Remove duplicates: "array/001-remove-duplicates.md"
