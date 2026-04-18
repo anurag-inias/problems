@@ -86,6 +86,7 @@ nav:
           - Implement Queue using Stack: "stack/02.md"
           - Implement two stack in an array: "stack/03.md"
           - Infix to Postfix Expression: "stack/04.md"
+          - Valid Parentheses in an Expression: "stack/05.md"
   - Array:
       - Basic:
           - Remove duplicates: "array/001-remove-duplicates.md"
