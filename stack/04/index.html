@@ -11,7 +11,7 @@
         <link rel="prev" href="../03/">
       
       
-        <link rel="next" href="../../array/001-remove-duplicates/">
+        <link rel="next" href="../05/">
       
       
         
@@ -550,6 +550,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valid Parentheses in an Expression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1746,10 +1774,12 @@
 <h2 id="solution">Solution</h2>
 <details>
 <summary>Expand</summary>
-<p>We use <em>Shunting-Yard algorithm</em> for converting an infix expression to postfix expression. The algorithm is broken in three parts:
-1. General handling of operators and operands.
-2. Exception for parenthesis.
-3. Exception for right associative operators.</p>
+<p>We use <em>Shunting-Yard algorithm</em> for converting an infix expression to postfix expression. The algorithm is broken in three parts:</p>
+<ol>
+<li>General handling of operators and operands.</li>
+<li>Exception for parenthesis.</li>
+<li>Exception for right associative operators.</li>
+</ol>
 <h3 id="general-handling-of-operators-and-operands">General handling of operators and operands</h3>
 <ol>
 <li>If an <em>operand</em> is encountered: simply pass it to the output.</li>
