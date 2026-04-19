@@ -91,6 +91,7 @@ nav:
           - Insert Element to a Stack's bottom: "stack/07.md"
           - Reverse a Stack: "stack/08.md"
           - Reversing the first K of a Queue: "stack/09.md"
+          - Implement k stacks in a single array: "stack/10.md"
   - Array:
       - Basic:
           - Remove duplicates: "array/001-remove-duplicates.md"
