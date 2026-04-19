@@ -93,6 +93,8 @@ nav:
           - Reversing the first K of a Queue: "stack/09.md"
       - Medium:
           - Implement k stacks in a single array: "stack/10.md"
+          - Implement Stack using Queues: "stack/11.md"
+          - Previous Smaller Element: "stack/12.md"
   - Array:
       - Basic:
           - Remove duplicates: "array/001-remove-duplicates.md"
