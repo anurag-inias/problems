@@ -95,6 +95,7 @@ nav:
           - Implement k stacks in a single array: "stack/10.md"
           - Implement Stack using Queues: "stack/11.md"
           - Previous Smaller Element: "stack/12.md"
+          - Next Greater Element: "stack/13.md"
   - Array:
       - Basic:
           - Remove duplicates: "array/001-remove-duplicates.md"
