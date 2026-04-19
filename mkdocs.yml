@@ -81,23 +81,24 @@ extra_css:
 nav:
   - <a href="https://listless.dev">↖ Back</a>: "back"
   - Stack:
+      - Common:
+          - Implement Queue using Stack: "stack/02.md"
+          - Implement Stack using Queues: "stack/11.md"
+          - Infix to Postfix Expression: "stack/04.md"
+          - Evaluate Postfix Expression: "stack/06.md"
       - Easy:
           - The Celebrity Problem: "stack/01.md"
-          - Implement Queue using Stack: "stack/02.md"
           - Implement two stack in an array: "stack/03.md"
-          - Infix to Postfix Expression: "stack/04.md"
           - Valid Parentheses in an Expression: "stack/05.md"
-          - Evaluate Postfix Expression: "stack/06.md"
           - Insert Element to a Stack's bottom: "stack/07.md"
           - Reverse a Stack: "stack/08.md"
           - Reversing the first K of a Queue: "stack/09.md"
-      - Medium:
-          - Implement k stacks in a single array: "stack/10.md"
-          - Implement Stack using Queues: "stack/11.md"
           - Previous Smaller Element: "stack/12.md"
           - Next Greater Element: "stack/13.md"
+      - Medium:
+          - Implement k stacks in a single array: "stack/10.md"
   - Array:
-      - Basic:
+      - Common:
           - Remove duplicates: "array/001-remove-duplicates.md"
           - Generate all subsequences: "array/002-generate-all-subsequences.md"
           - Generate all subarrays: "array/003-generate-all-subarrays.md"
